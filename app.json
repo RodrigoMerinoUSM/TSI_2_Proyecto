@@ -1,0 +1,20 @@
+{
+  "expo": {
+    "name": "Blue Express Regist",
+    "slug": "blue-express-regist",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "scheme": "blueexpress",
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "cl.blueexpress.regist"
+    },
+    "android": {
+      "package": "cl.blueexpress.regist"
+    },
+    "plugins": [
+      "expo-sqlite"
+    ]
+  }
+}

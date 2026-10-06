@@ -1,0 +1,16 @@
+export const C = {
+  bg: "#07111f",
+  panel: "#0d1e38",
+  card: "#111f34",
+  card2: "#142743",
+  line: "#24344b",
+  blue: "#3b82f6",
+  blueDark: "#2563eb",
+  text: "#f8fafc",
+  muted: "#94a3b8",
+  dim: "#64748b",
+  green: "#22c55e",
+  red: "#f87171",
+  amber: "#f59e0b",
+  purple: "#c084fc",
+};
