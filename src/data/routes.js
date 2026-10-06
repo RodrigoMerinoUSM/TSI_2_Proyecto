@@ -1,11 +1,3 @@
-export const INITIAL_ORDERS = [
-  { id: "BEX-2024-001247", amount: 4999, status: "Pendiente", commune: "Providencia", address: "Av. Providencia 1234" },
-  { id: "BEX-2024-001248", amount: 12500, status: "Pendiente", commune: "Las Condes", address: "Los Leones 456" },
-  { id: "BEX-2024-001249", amount: 8750, status: "Entregado", commune: "La Florida", address: "Santa Rosa 789", payMethod: "Efectivo", time: "10:42" },
-  { id: "BEX-2024-001250", amount: 3200, status: "Pendiente", commune: "San Miguel", address: "Gran Avenida 2345" },
-  { id: "BEX-2024-001251", amount: 15000, status: "Pendiente", commune: "Macul", address: "Vicuña Mackenna 987" },
-];
-
 export const ROUTE_HISTORY = [
   {
     route: "R-105", date: "09 Ene 2024", repartidor: "María González Silva",
@@ -93,10 +85,4 @@ export const ADMIN_HISTORY = [
       ] },
     ],
   },
-];
-
-export const INITIAL_USERS = [
-  { id: 1, name: "Jorge Espinoza Ramos", rut: "12.345.678-9", route: "R-042", role: "Repartidor" },
-  { id: 2, name: "María González Silva", rut: "15.234.567-8", route: "R-105", role: "Repartidor" },
-  { id: 3, name: "Pedro Vargas León", rut: "17.456.789-0", route: "R-213", role: "Supervisor" },
 ];

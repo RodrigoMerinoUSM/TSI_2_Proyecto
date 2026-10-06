@@ -1,66 +1,57 @@
-# Blue Express Regist
+# TSI 2 Proyecto
 
-Aplicación móvil desarrollada con React Native y Expo SDK 54. El proyecto está
-listo para abrirse en Visual Studio Code y ejecutarse en Android, iOS o web.
+Aplicación Expo / React Native organizada por responsabilidades.
 
-## Requisitos
+## Estructura principal
 
-- Node.js 22
-- pnpm 10
-- Expo Go instalado en el teléfono, o un emulador Android/iOS configurado
-
-Para instalar pnpm:
-
-```bash
-npm install --global pnpm@10.34.3
+```text
+TSI_2_Proyecto/
+├── app/                  # Archivos de rutas/template que ya tenía el proyecto
+├── assets/               # Imágenes y recursos estáticos
+│   └── imports/          # Imágenes importadas por el proyecto
+├── components/           # Componentes visuales reutilizables
+│   ├── admin/            # Componentes exclusivos del administrador
+│   ├── common/           # Botones, cards, headers, filtros, etc.
+│   └── ui/               # Componentes UI originales del template
+├── constants/            # Constantes globales del proyecto/template
+├── hooks/                # Hooks reutilizables
+├── scripts/              # Scripts de desarrollo/build
+├── src/
+│   ├── app/              # Coordinación principal de la aplicación
+│   ├── data/             # Datos mock separados por dominio
+│   ├── database/         # SQLite y repositorios
+│   ├── models/           # Modelos de dominio
+│   ├── screens/          # Pantallas separadas por rol
+│   │   ├── admin/
+│   │   ├── auth/
+│   │   └── courier/
+│   ├── styles/           # Estilos compartidos
+│   ├── theme/            # Colores/tema de la app
+│   └── utils/            # Funciones auxiliares
+├── App.js                # Entrada visual mínima
+└── index.js              # Registro de la app en Expo
 ```
 
-## Abrir el proyecto en Visual Studio Code
+## Criterio de organización
 
-1. Copia o descarga la carpeta completa del proyecto.
-2. Abre la carpeta, no solamente `App.js`, en Visual Studio Code.
-3. Abre una terminal integrada.
-4. Instala las dependencias:
+- `App.js` ya no contiene todas las pantallas y componentes en un único archivo.
+- Las pantallas están separadas por rol en `src/screens`.
+- Los componentes reutilizables están en la carpeta raíz `components`, para mantener la estructura original del proyecto.
+- `src/data/mockData.js` se dividió en `orders.js`, `routes.js` y `users.js`.
+- Los recursos gráficos dejaron de estar dentro de `src` y están en `assets/imports`.
+- La carpeta `app` se conserva, tal como estaba en la estructura original.
+
+## Inicio
 
 ```bash
 pnpm install
-```
-
-## Ejecutar con Expo
-
-Inicia Expo:
-
-```bash
 pnpm start
 ```
 
-Después puedes:
-
-- Escanear el código QR con Expo Go desde un teléfono conectado a la misma red.
-- Presionar `a` para abrir Android.
-- Presionar `i` para abrir el simulador de iOS en macOS.
-- Presionar `w` para abrir la versión web.
-
-También puedes iniciar directamente una plataforma:
+También puedes usar:
 
 ```bash
 pnpm android
 pnpm ios
 pnpm web
 ```
-
-## Estructura principal
-
-- `App.js`: interfaz y lógica principal.
-- `index.js`: punto de entrada de Expo.
-- `app.json`: configuración de Android, iOS y Expo.
-- `babel.config.js`: configuración de Babel para Expo.
-- `src/imports`: recursos gráficos del proyecto.
-
-## Notas
-
-- No se necesitan variables de entorno para ejecutar la aplicación.
-- El comando `pnpm dev` está reservado para la vista previa dentro de Figma
-  Make. Para trabajar localmente en Visual Studio Code usa `pnpm start`.
-- El simulador de iOS requiere macOS. Expo Go en un iPhone físico puede usarse
-  desde Windows, macOS o Linux.
